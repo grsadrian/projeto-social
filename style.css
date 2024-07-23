@@ -14,9 +14,9 @@ body {
 }
 
 body {
-    background: url(imagens/fundo-madeira.jpg) no-repeat top center;
-    background-size: cover;
-    background-attachment: fixed;
+  background: url(imagens/fundo-madeira.jpg) no-repeat top center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 main {
@@ -25,7 +25,7 @@ main {
 }
 
 section#telefone {
-    /* Esta configuração com position absolute é para centralizar a section. A caixa mãe (main) tem o posicionamento relativo. */
+  /* Esta configuração com position absolute é para centralizar a section. A caixa mãe (main) tem o posicionamento relativo. */
   height: 627px;
   width: 311px;
   background-color: blue;
@@ -37,9 +37,36 @@ section#telefone {
 }
 
 iframe#tela {
-    position: relative;
-    top: 80px;
-    left: 22px;
-    width: 269px;
-    height: 471px;
+  position: relative;
+  top: 80px;
+  left: 22px;
+  /* A imagem da tela home foi feita em um iframe, foi criado um documento html e inserido este documento dentro do iframe, depois fez as configurações de posicionamento dentro da tela do celular. */
+  width: 269px;
+  height: 471px;
+}
+
+section#redes-sociais {
+    /* Para colocar os botões do lado direito. */
+  text-align: right;
+}
+
+section#redes-sociais img {
+  width: 50px;
+  margin: 10px;
+  /* border-radius é para deixar efeito redondo nos links, box-sizing é para a borda ocupar o lado de dentro e não afastar os demais links quando passar o mouse em cima. */
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.705);
+  box-sizing: border-box;
+}
+
+section#redes-sociais img:hover {
+  border: 2px solid rgba(255, 255, 255, 0.603);
+  /* esse transform é para dar uma animação de chegar para o lado quando passar o mouse em cima.*/
+  transform: translate(-3px, -3px);
+  box-shadow: 5px 5px 10px black;
+  transition: transform 0.3s, border 0.5s;
+}
+
+section#redes-sociais img:active {
+    transform: scale(95%);
 }
